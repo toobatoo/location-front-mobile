@@ -1,0 +1,30 @@
+.flex-container {
+    height: 80vh;
+    margin: 0 auto; position: relative; 
+}
+.row {
+    width: auto;
+}
+.my-card__media {
+    background-image: url("http://localhost/rental-std/images/studio/A.jpg");
+  }
+.mdc-card {
+    margin-top: 10px; 
+    padding: 5px;
+    border-radius: 4px;
+   width: 95vw;
+  }
+  .text-card__primary {
+    padding: 1rem;
+}
+.text-card__subtitle, .mdc-typography--body1 {
+color: gray;
+}
+.text-card__subtitle{
+    font-weight: bold;
+}
+@media screen and (min-width: 500px) {
+    .mdc-card {
+        height: 80vh;
+    }
+  }

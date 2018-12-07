@@ -1,0 +1,77 @@
+<div class="container">
+  <aside class="mdc-drawer mdc-drawer--dismissible">
+    <div class="mdc-drawer__content">
+      <div class="mdc-list">
+        <a (click)="link('/home')" class="mdc-list-item mdc-list-item--activated" href="javascript:void(0)"
+          aria-selected="true">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
+          <span class="mdc-list-item__text">Accueil</span>
+        </a>
+        <a (click)="link('/disponibilites/0/0')" class="mdc-list-item" href="javascript:void(0)" aria-selected="true">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+          <span class="mdc-list-item__text">Disponibilités</span>
+        </a>
+        <a (click)="link('/photos')" class="mdc-list-item" href="javascript:void(0)">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">photo_camera</i>
+          <span class="mdc-list-item__text">Photos</span>
+        </a>
+        <a (click)="link('/description')" class="mdc-list-item" href="javascript:void(0)">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">format_list_bulleted</i>
+          <span class="mdc-list-item__text">Description</span>
+        </a>
+        <a (click)="link('/tarif')" class="mdc-list-item" href="javascript:void(0)">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">euro_symbol</i>
+          <span class="mdc-list-item__text">Tarifs</span>
+        </a>
+        <a (click)="link('/map')" class="mdc-list-item" href="javascript:void(0)">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">my_location</i>
+          <span class="mdc-list-item__text">Localisation</span>
+        </a>
+        <a (click)="link('/contact')" class="mdc-list-item" href="javascript:void(0)">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+          <span class="mdc-list-item__text">Contact</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <div class="mdc-drawer-app-content">
+    <header class="mdc-top-app-bar app-bar" id="app-bar">
+      <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+          <a href="javascript:void(0)" class="demo-menu material-icons mdc-top-app-bar__navigation-icon">menu</a>
+          <span class="mdc-top-app-bar__title">Beach's Cosy Home</span>
+        </section>
+        <button class="mdc-icon-button material-icons help" (click)="dialog.open()">help_outline</button>
+      </div>
+    </header>
+
+    <main class="main-content" id="main-content">
+      <div class="mdc-top-app-bar--fixed-adjust">
+        <router-outlet></router-outlet>
+      </div>
+    </main>
+  </div>
+
+</div>
+
+<div class="mdc-dialog" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">
+  <div class="mdc-dialog__container">
+    <div class="mdc-dialog__surface">
+      <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
+      <h2 class="mdc-dialog__title" id="my-dialog-title">
+        <!--
+     -->PERIODE DE LOCATION
+        <!--
+   -->
+      </h2>
+      <div class="mdc-dialog__content" id="my-dialog-content">
+        La période de location s'effectue du 1er mai au 30 novembre.
+      </div>
+      <footer class="mdc-dialog__actions">
+        <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="yes">Ok</button>
+      </footer>
+    </div>
+  </div>
+  <div class="mdc-dialog__scrim"></div>
+</div>

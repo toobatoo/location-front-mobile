@@ -1,0 +1,6 @@
+<div class="container">
+    <div *ngFor="let tarif of listTarifs; let i = index;" class="row mdc-elevation--z5">
+        <app-card [month]="listMonths[i]" [price]="tarif?.price" [value]="tarif?.month" (emitPrice)="goDisponibilites($event)">
+        </app-card>
+    </div>
+</div>

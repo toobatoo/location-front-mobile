@@ -1,0 +1,23 @@
+
+.help{
+  float: right;
+  margin-right: 5px;
+}
+
+.mdc-top-app-bar--fixed-adjust {
+    height: 90vh;
+    width: 100vw;
+    position: fixed;
+    margin: 0 auto;
+    overflow-y: scroll;
+  }
+
+  @media screen and (min-width: 500px) {
+    .mdc-top-app-bar--fixed-adjust {
+      height: 80vh;
+      width: 100vw;
+      position: fixed;
+      margin: 0 auto;
+      overflow-y: scroll;
+    }
+  }

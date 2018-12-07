@@ -1,0 +1,106 @@
+<div>
+  <h3 class="mdc-typography--headline6">Sélectionnez vos dates
+    <button (click)='checkedAll()' class="btn-checkAll mdc-button mdc-button--dense mdc-button--raised mdc-ripple-upgraded">Toutes</button>
+  </h3>
+  <ul class="mdc-list" role="group" aria-label="List with checkbox items">
+    <li *ngFor='let booking of bookingList' class="mdc-list-item" role="checkbox" aria-checked="false" [ngClass]="{'forbidden': booking.type=='OFF'}">
+      <span class="mdc-list-item__graphic">
+        <div class="mdc-checkbox">
+          <input type="hidden" value='{{ booking.id }}' />
+          <input value='{{ booking.price }}' (click)='dateIsChecked($event, booking)' [disabled]="booking.type=='OFF'"
+            [checked]="checked && booking.type=='ON'" type="checkbox" class="mdc-checkbox__native-control" id="demo-list-checkbox-item-1" />
+          <div class="mdc-checkbox__background">
+            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+              <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+            </svg>
+            <div class="mdc-checkbox__mixedmark"></div>
+          </div>
+        </div>
+      </span>
+      <label class="mdc-list-item__text" for="demo-list-checkbox-item-1">{{ booking.date }}</label>
+    </li>
+  </ul>
+</div>
+<hr>
+
+<form [formGroup]="bookingForm">
+  <div class="sep">
+    <div class="mdc-select mdc-select--outlined"><i class="mdc-select__dropdown-icon"></i>
+      <select formControlName="civilite" id="outlined" class="mdc-select__native-control">
+        <option value="" disabled="" selected=""></option>
+        <option value="M.">M.</option>
+        <option value="Mme">Mme</option>
+        <option value="Mlle">Mlle</option>
+      </select><label for="outlined" class="mdc-floating-label mdc-floating-label--float-above">Civilité</label>
+      <div class="mdc-notched-outline mdc-notched-outline--notched"><svg focusable="false">
+          <path class="mdc-notched-outline__path" d="M44.75,1h47.05a4,4 0 0 1 4,4v45.6a4,4 0 0 1 -4,4h-86.6a4,4 0 0 1 -4,-4v-45.6a4,4 0 0 1 4,-4h6.8"></path>
+        </svg></div>
+      <div class="mdc-notched-outline__idle"></div>
+    </div>
+  </div>
+
+  <div class="sep">
+    <div class="txtName mdc-text-field text-field mdc-ripple-upgraded">
+      <input formControlName="name" name="name" type="text" id="text-field--helper" class="mdc-text-field__input"
+        required />
+      <label class="mdc-floating-label" for="text-field--helper">Nom</label>
+      <div class="mdc-line-ripple"></div>
+    </div>
+  </div>
+
+  <div class="sep">
+    <div class="txtFirstname mdc-text-field text-field mdc-ripple-upgraded">
+      <input formControlName="firstname" name="firstname" type="text" id="text-field--helper" class="mdc-text-field__input"
+        required />
+      <label class="mdc-floating-label" for="text-field--helper">Prénom</label>
+      <div class="mdc-line-ripple"></div>
+    </div>
+  </div>
+
+  <div class="sep">
+    <div class="txtMail mdc-text-field text-field mdc-ripple-upgraded">
+      <input formControlName="mail" name="mail" type="text" id="text-field--helper" class="mdc-text-field__input"
+        required />
+      <label class="mdc-floating-label" for="text-field--helper">Mail</label>
+      <div class="mdc-line-ripple"></div>
+    </div>
+  </div>
+
+  <div class="sep">
+    <div class="txtAddress mdc-text-field text-field mdc-ripple-upgraded">
+      <input formControlName="address" name="address" type="text" id="text-field--helper" class="mdc-text-field__input"
+        required />
+      <label class="mdc-floating-label" for="text-field--helper">Adresse</label>
+      <div class="mdc-line-ripple"></div>
+    </div>
+  </div>
+
+  <div class="sep">
+    <div class="txtCp mdc-text-field text-field mdc-ripple-upgraded">
+      <input formControlName="cp" name="cp" type="text" id="text-field--helper" class="mdc-text-field__input" required />
+      <label class="mdc-floating-label" for="text-field--helper">Code postal</label>
+      <div class="mdc-line-ripple"></div>
+    </div>
+  </div>
+
+  <div class="sep">
+    <div class="txtPhone mdc-text-field text-field mdc-ripple-upgraded">
+      <input formControlName="phone" name="phone" type="text" id="text-field--helper" class="mdc-text-field__input"
+        required />
+      <label class="mdc-floating-label" for="text-field--helper">Téléphone</label>
+      <div class="mdc-line-ripple"></div>
+    </div>
+  </div>
+
+  <div [hidden]="!showMail" role="progressbar" class="mdc-linear-progress mdc-linear-progress--reversed">
+    <div class="mdc-linear-progress__buffering-dots"></div>
+    <div class="mdc-linear-progress__buffer" style="transform: scaleX(0.75);"></div>
+    <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar" style="transform: scaleX(0.5);"><span class="mdc-linear-progress__bar-inner"></span></div>
+    <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar"><span class="mdc-linear-progress__bar-inner"></span></div>
+  </div>
+
+  <div class="sep">
+    <button (click)='submit()' class="mdc-button mdc-button--dense mdc-button--raised mdc-ripple-upgraded">Valider</button>
+  </div>
+
+</form>

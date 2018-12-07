@@ -1,0 +1,12 @@
+<div class="mdc-grid-list mdc-grid-list">
+  <ul class="mdc-grid-list__tiles">
+    <li *ngFor="let photo of listPhotos" class="mdc-grid-tile mdc-elevation--z6">
+      <div class="mdc-grid-tile__primary">
+        <img class="mdc-grid-tile__primary-content" src="{{photo.url}}" />
+      </div>
+
+      <span class="mdc-grid-tile__title mdc-typography--headline6">{{photo.title}}</span>
+
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,9 @@
+.container{
+   
+}
+.row {
+    margin: 0 auto;
+    width: 70vw;
+    margin-top: 15px;
+    border-radius: 4px;
+}

@@ -1,0 +1,15 @@
+agm-map {
+    width: 95vw;
+    height: 68vh;
+}
+.mdc-card{
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.btn-location > .material-icons{
+    color: white;
+}
+.txtDepart, .txtArrivee {
+    width: 100%;
+}
+

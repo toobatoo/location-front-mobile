@@ -1,0 +1,45 @@
+<div class="content-mail">
+  <form>
+    <div class="txt-nom mdc-text-field">
+      <input name="nom" required ngModel #nom="ngModel" type="text" id="my-text-field" class="mdc-text-field__input">
+      <label class="mdc-floating-label" for="my-text-field">Entrez votre nom</label>
+      <div class="mdc-line-ripple"></div>
+    </div>
+
+    <div class="txt-prenom mdc-text-field">
+      <input name="prenom" required ngModel #prenom="ngModel" type="text" id="my-text-field" class="mdc-text-field__input">
+      <label class="mdc-floating-label" for="my-text-field">Entrez votre prénom</label>
+      <div class="mdc-line-ripple"></div>
+    </div>
+
+    <div class="txt-mail mdc-text-field">
+      <input name="mail" required ngModel #mail="ngModel" type="text" id="my-text-field" class="mdc-text-field__input">
+      <label class="mdc-floating-label" for="my-text-field">Entrez votre mail</label>
+      <div class="mdc-line-ripple"></div>
+    </div>
+
+    <div class="txt-msg mdc-text-field mdc-text-field--textarea">
+      <textarea name="msg" required ngModel #msg="ngModel" id="textarea" class="mdc-text-field__input msg" rows="8"
+        cols="40"></textarea>
+      <label for="textarea" class="mdc-floating-label">Entrez votre message</label>
+    </div>
+
+    <button (click)='submit(nom, prenom, mail, msg)' class="btn-send mdc-button mdc-button--raised mdc-ripple-upgraded">
+      <i class="material-icons mdc-button__icon" aria-hidden="true">send</i>
+      <span class="txt">Envoyer</span>
+    </button>
+  </form>
+</div>
+<div class="content-infos">
+  <div class="txt-infos">
+    <div class="mdc-typography--subtitle2">Adresse</div>
+    <div class="mdc-typography--body2">19 résidence horizon marin</div>
+    <div class="mdc-typography--body2">33 680 Lacanau océan</div>
+    <hr>
+    <div class="mdc-typography--subtitle2">Mail</div>
+    <div class="mdc-typography--body2">sebastien.chappert@hotmail.fr</div>
+    <hr>
+    <div class="mdc-typography--subtitle2">Téléphone</div>
+    <div class="mdc-typography--body2">07 60 03 76 72</div>
+  </div>
+</div>

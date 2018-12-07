@@ -1,0 +1,36 @@
+.mdc-typography--subtitle1 {
+    color: gray;
+    text-align: justify;
+  }
+ul {
+    color: gray;
+}
+.hr{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    color: #d50023;
+}
+.mdc-grid-tile li, .list{
+    list-style: none;
+}
+@media screen and (max-width: 400px) {
+    h1 {
+      font-size: 1rem;
+    }
+    .mdc-typography--subtitle1 {
+        color: gray;
+        font-size: 1rem;
+        text-align: justify;
+      }
+    ul {
+        color: gray;
+    }
+    .hr{
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        color: #d50023;
+    }
+    .mdc-grid-tile li, .list{
+        list-style: none;
+    }
+  }

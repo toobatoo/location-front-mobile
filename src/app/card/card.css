@@ -1,0 +1,11 @@
+.mdc-card {
+    color: #6200ec;
+}
+.bloc-content {
+    background-color: #f4f6f5;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.dotted{
+    font-size: 0.5rem;
+}

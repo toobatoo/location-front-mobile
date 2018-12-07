@@ -1,0 +1,19 @@
+.forbidden{
+    text-decoration: line-through;
+}
+.btn-checkAll{
+    margin-left: 10px;
+}
+#outlined{
+    width: 150px;
+}
+.sep{
+    margin-top: 5px;
+}
+.txtName, .txtFirstname, .txtMail, .txtAddress {
+    width: 100%;
+}
+.mdc-linear-progress{
+    margin-top: 15px;
+    margin-bottom: 7px;
+}

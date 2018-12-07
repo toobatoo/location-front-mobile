@@ -1,0 +1,35 @@
+
+
+@media screen and (max-width: 400px) {
+.txt-nom, .txt-prenom, .txt-mail, .txt-msg{
+    width: 95vw;
+    margin-top: 5px;
+    }
+}
+@media screen and (min-width: 400px) {
+    .txt-nom, .txt-prenom, .txt-mail, .txt-msg{
+        width: 100%;
+        margin-top: 5px;
+        }
+    .content-mail{
+        width: 50vw;
+        float: left;
+        margin-right: 5px;
+    }
+    .content-infos{
+        margin-top: 5px;
+    }
+    .txt-infos{
+        width: 90%;
+    }
+}
+.mdc-typography--body2{
+    color: #6200ec;
+}
+.danger{
+    color: red;
+}
+.btn-send{
+    margin-top: 7px;
+    margin-bottom: 7px;
+}

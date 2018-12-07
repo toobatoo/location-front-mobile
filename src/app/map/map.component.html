@@ -1,0 +1,41 @@
+<div class="mdc-card price-card mdc-card--outlined">
+  <div class="mdc-card__primary-action mdc-ripple-upgraded" tabindex="0" style="--mdc-ripple-fg-size:210px; --mdc-ripple-fg-scale:1.83226; --mdc-ripple-fg-translate-start:49.7383px, -30.6055px; --mdc-ripple-fg-translate-end:70px, -38px;">
+
+    <div class="price-card__secondary mdc-typography--caption bloc-content">
+      <form #form>
+        <div class="txtDepart mdc-text-field text-field mdc-ripple-upgraded">
+          <input type="text" id="text-field--helper" class="mdc-text-field__input" name="origin" value={{originGeocode}} />
+          <label class="mdc-floating-label" for="text-field--helper">{{placeholderDepart}}</label>
+          <div class="mdc-line-ripple"></div>
+        </div>
+
+        <div class="txtArrivee mdc-text-field text-field mdc-ripple-upgraded">
+          <input type="text" id="text-field--helper" class="mdc-text-field__input" name="destination" value={{destinationGeocode}} />
+          <label class="mdc-floating-label" for="text-field--helper">{{placeholderArrivee}}</label>
+          <div class="mdc-line-ripple"></div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="price-card__primary bloc-content">
+    <agm-map [latitude]="location.lat" [longitude]="location.lng" [zoom]="zoom" [mapTypeId]="mapTypeId">
+      <agm-marker [latitude]="location.lat" [longitude]="location.lng" [iconUrl]="iconMarker"></agm-marker>
+      <agm-direction [origin]="originCoords" [destination]="destinationCoords" [renderOptions]="renderOptions"></agm-direction>
+    </agm-map>
+  </div>
+
+</div>
+<div class="mdc-card__actions">
+  <div class="mdc-card__action-buttons">
+    <button (click)='showLocation(form)' class="mdc-button mdc-button--raised mdc-card__action mdc-card__action--button mdc-ripple-upgraded">Itinéraire</button>
+
+    <button (click)='showPlace()' class="btn-location mdc-button mdc-button--raised mdc-ripple-upgraded">
+      <i class="material-icons mdc-button__icon" aria-hidden="true">my_location</i>
+      <span class="txt">Re-centrer</span>
+    </button>
+  </div>
+
+
+</div>
