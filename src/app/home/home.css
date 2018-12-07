@@ -7,6 +7,10 @@
 }
 .my-card__media {
     background-image: url("http://vps547519.ovh.net/rental-std/images/studio/A.jpg");
+    -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
   }
 .mdc-card {
     margin-top: 10px; 
