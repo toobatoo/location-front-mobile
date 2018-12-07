@@ -19,23 +19,24 @@
 
   </div>
 
+  <div class="mdc-card__actions">
+    <div class="mdc-card__action-buttons">
+      <button (click)='showLocation(form)' class="mdc-button mdc-button--raised mdc-card__action mdc-card__action--button mdc-ripple-upgraded">Itinéraire</button>
+
+      <button (click)='showPlace()' class="btn-location mdc-button mdc-button--raised mdc-ripple-upgraded">
+        <i class="material-icons mdc-button__icon" aria-hidden="true">my_location</i>
+        <span class="txt">Re-centrer</span>
+      </button>
+    </div>
+
+
+  </div>
+
   <div class="price-card__primary bloc-content">
     <agm-map [latitude]="location.lat" [longitude]="location.lng" [zoom]="zoom" [mapTypeId]="mapTypeId">
       <agm-marker [latitude]="location.lat" [longitude]="location.lng" [iconUrl]="iconMarker"></agm-marker>
       <agm-direction [origin]="originCoords" [destination]="destinationCoords" [renderOptions]="renderOptions"></agm-direction>
     </agm-map>
   </div>
-
-</div>
-<div class="mdc-card__actions">
-  <div class="mdc-card__action-buttons">
-    <button (click)='showLocation(form)' class="mdc-button mdc-button--raised mdc-card__action mdc-card__action--button mdc-ripple-upgraded">Itinéraire</button>
-
-    <button (click)='showPlace()' class="btn-location mdc-button mdc-button--raised mdc-ripple-upgraded">
-      <i class="material-icons mdc-button__icon" aria-hidden="true">my_location</i>
-      <span class="txt">Re-centrer</span>
-    </button>
-  </div>
-
 
 </div>
