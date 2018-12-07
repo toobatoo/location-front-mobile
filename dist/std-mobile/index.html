@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <title>StdMobile</title>
   <base href="/std-mobile">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="std-mobile/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
@@ -15,6 +14,16 @@
 
 <body>
   <app-root></app-root>
+
+  <script src="assets/screen-full.min.js"></script>
+  <script>
+    // self executing function here
+    (function () {
+      if (screenfull.enabled) {
+        screenfull.request();
+      }
+    })();
+  </script>
   <script type="text/javascript" src="std-mobile/runtime.ec2944dd8b20ec099bf3.js"></script>
   <script type="text/javascript" src="std-mobile/polyfills.c6871e56cb80756a5498.js"></script>
   <script type="text/javascript" src="std-mobile/main.13854c8816c5f98d5664.js"></script>
