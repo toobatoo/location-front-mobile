@@ -1,1 +1,1 @@
-export const URL_API = 'http://s-chap.fr:8080/location-api';
+export const URL_API = 'http://vps547519.ovh.net:8080/location-api';
